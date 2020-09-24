@@ -7,15 +7,16 @@ import React from "react";
 import "./styles/HomeLanding.css";
 
 import Navbar from "../components/Navbar";
+import HomeCenter from "../components/HomeCenter";
+import Footer from "../components/Footer";
 
 class HomeLanding extends React.Component {
   render() {
     return (
       <section className="hero">
         <Navbar />
-        <main>
-          <h1>Hero</h1>
-        </main>
+        <HomeCenter />
+        <Footer />
       </section>
     );
   }

@@ -17,6 +17,7 @@
 }
 
 .button {
+  align-self: flex-start;
   cursor: pointer;
   background-color: #e50914;
   color: white;
