@@ -7,15 +7,18 @@ import React from "react";
 import "./styles/HomeLanding.css";
 
 import Navbar from "../components/Navbar";
+// import CardQuestionButton from "../components/CardFAQ";
+import ListFAQ from "../components/ListFAQ";
 
 class HomeLanding extends React.Component {
   render() {
     return (
-      <section className="hero">
+      <section>
         <Navbar />
-        <main>
+        <main className="hero">
           <h1>Hero</h1>
         </main>
+        <ListFAQ />
       </section>
     );
   }
