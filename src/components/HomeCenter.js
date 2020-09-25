@@ -5,7 +5,7 @@ import FormEmail from "./FormEmail";
 class HomeCenter extends React.Component {
   render() {
     return (
-      <section className="Home-container">
+      <section className="Home-container ">
         <h1>Películas y series ilimitadas y mucho más</h1>
         <h3>Disfruta donde quieras. Cancela cuando quieras.</h3>
         <FormEmail />
