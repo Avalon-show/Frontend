@@ -1,0 +1,10 @@
+.faq-list {
+  /* width: 75%; */
+  max-width: 815px;
+  margin: 2em auto;
+}
+
+.faq-list__item {
+  list-style-type: none;
+  margin: 0 0 8px 0;
+}
