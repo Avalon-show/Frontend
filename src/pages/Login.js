@@ -1,4 +1,20 @@
-//en esta pagina va el
-//navbar con el logo de netflix sin boton de iniciar sesion
-//Hero con caja para iniciar sesion
-//footer
+import React from "react";
+import "./styles/HomeLanding.css";
+
+import Navbar from "../components/Navbar";
+import LoginComponent from "../components/LoginComponent";
+import Footer from "../components/Footer";
+
+class Login extends React.Component {
+  render() {
+    return (
+      <section className="bg-black hero">
+        <Navbar />
+        <LoginComponent />
+        <Footer />
+      </section>
+    );
+  }
+}
+
+export default Login;

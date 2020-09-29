@@ -4,8 +4,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 // import "./index.css";
 import "./assets/main.css";
-import HomeLanding from "./pages/HomeLanding";
+import App from "./components/App";
 
 const container = document.getElementById("app");
 
-ReactDOM.render(<HomeLanding />, container);
+ReactDOM.render(<App />, container);
