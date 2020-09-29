@@ -605,6 +605,19 @@ video {
   }
 }
 
+.formulario {
+  line-height: 1.375;
+  margin: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  --bg-opacity: 1;
+  background-color: #cbd5e0;
+  background-color: rgba(203, 213, 224, var(--bg-opacity));
+  border-radius: 0.25rem;
+}
+
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
@@ -18937,8 +18950,6 @@ video {
 .altura {
   height: 325px;
 }
-
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); */
 
 @media (min-width: 640px) {
   .sm\:container {

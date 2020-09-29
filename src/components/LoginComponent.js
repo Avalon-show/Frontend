@@ -11,12 +11,12 @@ class LoginComponent extends React.Component {
             Iniciar Sesión
           </h1>
           <input
-            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 leading-snug m-2 py-4 px-4 bg-gray-400 rounded placeholder-black hover:bg-white focus:outline-none focus:shadow-outline"
+            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 formulario placeholder-black hover:bg-white focus:outline-none focus:shadow-outline"
             type="Email"
             placeholder="Email"
           ></input>
           <input
-            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 leading-snug m-2 py-4 px-4 bg-gray-400 rounded placeholder-black hover:bg-white  focus:outline-none focus:shadow-outline"
+            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 formulario placeholder-black hover:bg-white  focus:outline-none focus:shadow-outline"
             type="text"
             placeholder="Contraseña"
           ></input>
