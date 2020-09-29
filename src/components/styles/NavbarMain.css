@@ -1,0 +1,26 @@
+.NavbarMain {
+  width: 100%;
+  display: flex;
+}
+
+.NavbarMain-container {
+  max-width: 100%;
+  height: 70px;
+  display: inherit;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.NavbarMain-image {
+  height: 30px;
+}
+.Navbar-lista {
+  display: flex;
+  color: white;
+  justify-content: start;
+  list-style: none;
+  padding: 20px;
+}
+.Navbar-lista li {
+  padding: 20px;
+}
