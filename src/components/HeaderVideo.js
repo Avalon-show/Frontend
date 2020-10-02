@@ -1,5 +1,4 @@
 import React from "react";
-import Carrusel from "./Carrusel";
 import "./styles/HeaderVideo.css";
 
 class HeaderVideo extends React.Component {
@@ -24,9 +23,6 @@ class HeaderVideo extends React.Component {
               Más información
             </button>
           </div>
-        </div>
-        <div>
-          <Carrusel />
         </div>
       </section>
     );
