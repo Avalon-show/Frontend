@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 class HomeMain extends React.Component {
   render() {
     return (
-      <section className="bg-red-900">
+      <section className="bg-black">
         <NavbarMain />
         <HeaderVideo />
 

@@ -21,7 +21,7 @@ class LoginComponent extends React.Component {
             placeholder="Contraseña"
           ></input>
           <Link
-            to="/Main"
+            to="/Cuenta"
             className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 button-login items-center mt-10"
           >
             Iniciar Sesión
