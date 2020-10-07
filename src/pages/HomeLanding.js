@@ -16,12 +16,10 @@ class HomeLanding extends React.Component {
       <section className="bg-black hero">
         <Navbar />
         <HomeCenter />
-        {/* <FormEmail /> */}
         <HomeSection />
         <HomeSection2 />
         <HomeSection3 />
         <ListFAQ />
-        {/* <FormEmail /> */}
         <Footer />
       </section>
     );
