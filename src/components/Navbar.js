@@ -8,7 +8,9 @@ class Navbar extends React.Component {
     return (
       <section className="Navbar">
         <div className="container">
-          <img className="image" src={logo} alt="Logo"></img>
+          <Link to="/Home">
+            <img className="image" src={logo} alt="Logo"></img>
+          </Link>
           <Link to="/Home/Login" className="button">
             Iniciar Sesión
           </Link>
