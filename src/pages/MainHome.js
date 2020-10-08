@@ -1,6 +1,6 @@
 //Home despues del login
 import React from "react";
-// import "./styles/HomeLanding.css";
+import "./styles/Main.css";
 
 import NavbarMain from "../components/NavbarMain";
 import HeaderVideo from "../components/HeaderVideo";
@@ -15,7 +15,7 @@ import Footer from "../components/Footer";
 class HomeMain extends React.Component {
   render() {
     return (
-      <section className="bg-black">
+      <section className="bg-black main">
         <NavbarMain />
         <HeaderVideo />
         <Categories title="Seguir Viendo Mi Contenido">

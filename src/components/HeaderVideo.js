@@ -1,5 +1,7 @@
 import React from "react";
 import "./styles/HeaderVideo.css";
+import video from "../images/trailer.mp4";
+// import "./styles/Main.css";
 
 class HeaderVideo extends React.Component {
   render() {
