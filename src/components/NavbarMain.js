@@ -2,9 +2,32 @@ import React from "react";
 import logo from "../images/logo.png";
 import { Link } from "react-router-dom";
 import video from "../images/trailer.mp4";
+import CarouselItem from "./CarouselItem";
 import "./styles/NavbarMain.css";
 
-class NavbarMain extends React.Component {
+const API = "http://www.omdbapi.com/?i=tt3896198&apikey=577cca3";
+
+export class NavbarMain extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      data: [],
+      searchTerm: "",
+      error: "",
+    };
+  }
+
+  async handleSubmit(e) {
+    e.preventDefault();
+    if (!this.state.searchTerm) {
+      return this.setState({ error: "Por favor escribe un texto válido" });
+    }
+
+    const res = await fetch(`${API}&s=${this.state.searchTerm}`);
+    const data = await res.json();
+    this.setState({ data: data.Search });
+  }
+
   render() {
     return (
       <section>
@@ -17,6 +40,23 @@ class NavbarMain extends React.Component {
               <li>Inicio</li>
               <li>Peliculas</li>
             </ol>
+            <div className="form">
+              <form
+                className="form-container"
+                onSubmit={(e) => this.handleSubmit(e)}
+              >
+                <input
+                  type="text"
+                  className="form-input"
+                  placeholder="Serarch"
+                  onChange={(e) =>
+                    this.setState({ searchTerm: e.target.value })
+                  }
+                  autoFocus
+                />
+              </form>
+              <p>{this.state.error ? this.state.error : ""}</p>
+            </div>
           </div>
         </div>
         <div>

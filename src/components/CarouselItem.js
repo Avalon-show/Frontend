@@ -3,6 +3,7 @@ import "./styles/CarouselItem.css";
 import playIcon from "../images/play-icon.png";
 import plusIcon from "../images/plus-icon.png";
 
+
 export const CarouselItem = ({ movie }) => {
   return (
     <div className="carousel-item1">
@@ -26,7 +27,9 @@ export const CarouselItem = ({ movie }) => {
           />
         </div>
         <p className="carousel-item1__details--title">{movie.Title}</p>
-        <p className="carousel-item1__details--subtitle">{movie.Year}</p>
+        <p className="carousel-item1__details--subtitle">
+          {movie.Year} {movie.Type}
+        </p>
       </div>
     </div>
   );
