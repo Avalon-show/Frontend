@@ -8,7 +8,7 @@ class NavbarMain extends React.Component {
   render() {
     return (
       <section>
-        <div className="NavbarMain">
+        <div className="NavbarMain1">
           <div className="NavbarMain-container">
             <Link to="/Main">
               <img className="NavbarMain-image" src={logo} alt="Logo"></img>
