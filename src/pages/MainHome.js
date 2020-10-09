@@ -5,8 +5,7 @@ import "./styles/Main.css";
 import NavbarMain from "../components/NavbarMain";
 import HeaderVideo from "../components/HeaderVideo";
 import Categories from "../components/Categories";
-import Carousel from "../components/Carousel";
-import CarouselItem from "../components/CarouselItem";
+import Carousell from "../components/Carousel";
 import List from "../components/List";
 import List2 from "../components/List2";
 import List3 from "../components/List3";
@@ -18,30 +17,22 @@ class HomeMain extends React.Component {
       <section className="bg-black main">
         <NavbarMain />
         <HeaderVideo />
-        <Categories title="Seguir Viendo Mi Contenido">
-          <Carousel>
+        <Categories title="Comedia Romantica">
+          <Carousell>
             <List />
-
-            {/* <CarouselItem
-              title="Peli6"
-              age="Año 2020"
-              edad="12+"
-              time="200 min"
-              image="https://cdn.pixabay.com/photo/2016/11/15/07/09/photo-manipulation-1825450_960_720.jpg"
-            /> } */}
-          </Carousel>
+          </Carousell>
         </Categories>
 
-        <Categories title="Contenido Exclusivo">
-          <Carousel>
+        <Categories title="Series">
+          <Carousell>
             <List2 />
-          </Carousel>
+          </Carousell>
         </Categories>
 
-        <Categories title="Nuevos Lanzamientos">
-          <Carousel>
+        <Categories title="Terror">
+          <Carousell>
             <List3 />
-          </Carousel>
+          </Carousell>
         </Categories>
 
         <Footer />

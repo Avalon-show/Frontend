@@ -12,15 +12,15 @@ class List extends React.Component {
   }
 
   async componentDidMount() {
-    const res = await fetch(`${API}&s=series`);
+    const res = await fetch(`${API}&s=horror`);
     const resJSON = await res.json();
     this.setState({ data: resJSON.Search });
   }
   render() {
     return (
       <div>
-        {this.state.data.map((movie) => {
-          return <CarouselItem movie={movie} />;
+        {this.state.data.map((movie,i) => {
+          return <CarouselItem movie={movie}key={i} />;
         })}
       </div>
     );
