@@ -30,7 +30,7 @@ export class NavbarMain extends React.Component {
 
   render() {
     return (
-      <section>
+      <section className= "w-screen">
         <div className="NavbarMain1">
           <div className="NavbarMain-container">
             <Link to="/Main">

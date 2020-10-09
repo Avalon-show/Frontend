@@ -1,6 +1,5 @@
 import React from "react";
 import CarouselItem from "../components/CarouselItem";
-import "./styles/NavbarMain.css";
 
 const API = "http://www.omdbapi.com/?i=tt3896198&apikey=577cca3";
 
@@ -15,7 +14,7 @@ class List extends React.Component {
   }
 
   async componentDidMount() {
-    const res = await fetch(`${API}&s=movie`);
+    const res = await fetch(`${API}&s=romantic`);
     const resJSON = await res.json();
     this.setState({ data: resJSON.Search });
   }
@@ -33,23 +32,6 @@ class List extends React.Component {
   render() {
     return (
       <div>
-        <div className="form">
-          <form
-            className="form-container"
-            onSubmit={(e) => this.handleSubmit(e)}
-          >
-            <input
-              type="text"
-              className="form-input"
-              placeholder="Serarch"
-              onChange={(e) =>
-                this.setState({ searchTerm: e.target.value })
-              }
-              autoFocus
-            />
-          </form>
-          <p>{this.state.error ? this.state.error : ""}</p>
-        </div>
         {this.state.data.map((movie, i) => {
           return (
               <CarouselItem movie={movie} key={i} />

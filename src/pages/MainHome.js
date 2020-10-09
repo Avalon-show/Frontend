@@ -17,19 +17,19 @@ class HomeMain extends React.Component {
       <section className="bg-black main">
         <NavbarMain />
         <HeaderVideo />
-        <Categories title="Seguir Viendo Mi Contenido">
+        <Categories title="Comedia Romantica">
           <Carousell>
             <List />
           </Carousell>
         </Categories>
 
-        <Categories title="Contenido Exclusivo">
+        <Categories title="Series">
           <Carousell>
             <List2 />
           </Carousell>
         </Categories>
 
-        <Categories title="Nuevos Lanzamientos">
+        <Categories title="Terror">
           <Carousell>
             <List3 />
           </Carousell>
