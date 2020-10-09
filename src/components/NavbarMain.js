@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../images/logo.png";
 import { Link } from "react-router-dom";
 import video from "../images/trailer.mp4";
-import CarouselItem from "./CarouselItem";
+import userIcon from "../images/user-icon.png";
 import "./styles/NavbarMain.css";
 
 const API = "http://www.omdbapi.com/?i=tt3896198&apikey=577cca3";
@@ -57,6 +57,22 @@ export class NavbarMain extends React.Component {
               </form>
               <p>{this.state.error ? this.state.error : ""}</p>
             </div>
+            <header className="header">
+            <div className="header__menu">
+              <div className="header__menu--profile">
+                <img src={userIcon} alt="" />
+                <p className="p-2">Perfil</p>
+              </div>
+              <ul>
+                <li>
+                  <a href="/Main">Cuenta</a>
+                </li>
+                <li>
+                  <a href="/Home">Cerrar Sesión</a>
+                </li>
+              </ul>
+            </div>
+          </header>
           </div>
         </div>
         <div>
@@ -64,6 +80,7 @@ export class NavbarMain extends React.Component {
             <source src={video} type="video/mp4" />
           </video>
         </div>
+      
       </section>
     );
   }

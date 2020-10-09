@@ -10,7 +10,6 @@ import List from "../components/List";
 import List2 from "../components/List2";
 import List3 from "../components/List3";
 import Footer from "../components/Footer";
-import Carousel from 'react-elastic-carousel';
 
 class HomeMain extends React.Component {
   render() {
