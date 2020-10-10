@@ -1,7 +1,10 @@
 .HeaderVideo {
+  position: relative;
   height: 350px;
   color: white;
   width: 600px;
+  margin-top: 250px;
+  margin-bottom: 50px;
 }
 
 .HeaderVideo h1 {

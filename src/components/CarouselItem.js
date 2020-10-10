@@ -3,29 +3,35 @@ import "./styles/CarouselItem.css";
 import playIcon from "../images/play-icon.png";
 import plusIcon from "../images/plus-icon.png";
 
-const CarouselItem = ({ children, title, age, edad, time, image }) => (
-  <div className="carousel-item">
-    <img className="carousel-item__img" src={image} alt="" />
-    <div className="carousel-item__details">
-      <div className="carousel-item__details-container">
-        <img
-          className="carousel-item__details--img"
-          src={playIcon}
-          alt="Play Icon"
-        />
-        <img
-          className="carousel-item__details--img"
-          src={plusIcon}
-          alt="Plus Icon"
-        />
-      </div>
-      <p className="carousel-item__details--title">{title}</p>
-      <p className="carousel-item__details--subtitle">
-        {age} | {edad} | {time}
-      </p>
-    </div>
-    {children}
-  </div>
-);
 
+export const CarouselItem = ({ movie }) => {
+  return (
+    <div className="carousel-item1">
+      <img
+        className="carousel-item1__img"
+        src={movie.Poster}
+        alt={movie.Title}
+        width="100%"
+      />
+      <div className="carousel-item1__details">
+        <div className="carousel-item1__details-container">
+          <img
+            className="carousel-item1__details--img"
+            src={playIcon}
+            alt="Play Icon"
+          />
+          <img
+            className="carousel-item1__details--img"
+            src={plusIcon}
+            alt="Plus Icon"
+          />
+        </div>
+        <p className="carousel-item1__details--title">{movie.Title}</p>
+        <p className="carousel-item1__details--subtitle">
+          {movie.Year} {movie.Type}
+        </p>
+      </div>
+    </div>
+  );
+};
 export default CarouselItem;
