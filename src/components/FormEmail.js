@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./styles/FormEmail.css";
 
@@ -16,7 +17,9 @@ class FormEmail extends React.Component {
             type="email"
             placeholder="Email"
           ></input>
-          <button className="Home-button">COMIENZA YA ></button>
+          <Link to="/Home/Register" className="Home-button">
+            COMIENZA YA
+          </Link>
         </div>
       </React.Fragment>
     );

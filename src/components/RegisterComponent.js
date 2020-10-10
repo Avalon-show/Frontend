@@ -69,48 +69,48 @@ const RegisterComponent = (props) => {
 
   return (
     <div className="justify-center contenedor px-12">
-      <div className="flex flex-col items-center contenedor-caja">
+      <form
+        className="flex flex-col items-center contenedor-caja"
+        onSubmit={handleSubmit}
+      >
         <h1 className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 text-white text-4xl m-10 text-center">
           Crear Cuenta
         </h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            name="email"
-            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 formulario placeholder-black hover:bg-white focus:outline-none focus:shadow-outline"
-            type="Email"
-            placeholder="email"
-            onChange={handleInput}
-          ></input>
-          <input
-            name="password"
-            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 formulario placeholder-black hover:bg-white  focus:outline-none focus:shadow-outline"
-            type="text"
-            placeholder="Contraseña"
-            onChange={handleInput}
-          ></input>
-          <input
-            name="name"
-            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 formulario placeholder-black hover:bg-white focus:outline-none focus:shadow-outline"
-            type="text"
-            placeholder="name"
-            onChange={handleInput}
-          ></input>
-          <input
-            name="lastname"
-            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 formulario placeholder-black hover:bg-white focus:outline-none focus:shadow-outline"
-            type="text"
-            placeholder="lastname"
-            onChange={handleInput}
-          ></input>
+        <input
+          name="email"
+          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 formulario placeholder-black hover:bg-white focus:outline-none focus:shadow-outline"
+          type="Email"
+          placeholder="email"
+          onChange={handleInput}
+        ></input>
+        <input
+          name="password"
+          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 formulario placeholder-black hover:bg-white  focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Contraseña"
+          onChange={handleInput}
+        ></input>
+        <input
+          name="name"
+          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 formulario placeholder-black hover:bg-white focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="name"
+          onChange={handleInput}
+        ></input>
+        <input
+          name="lastname"
+          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 formulario placeholder-black hover:bg-white focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="lastname"
+          onChange={handleInput}
+        ></input>
 
-          <button
-            to="/Cuenta"
-            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 button-login items-center mt-10"
-          >
-            Iniciar Sesión
-          </button>
-        </form>
-
+        <button
+          to="/Cuenta"
+          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 button-login items-center mt-10"
+        >
+          Registrarse
+        </button>
         <div className="flex w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 justify-between">
           <h6 className=" text-white text-sm text-left mt-2 mb-8">
             Recuerdame
@@ -128,7 +128,7 @@ const RegisterComponent = (props) => {
             no eres un robot. Más info.
           </h3>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
