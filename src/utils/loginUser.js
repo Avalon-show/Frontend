@@ -13,7 +13,7 @@ const loginUser = async (form) => {
       headers: new Headers({
         "Content-Type": "application/json",
         Authorization: `Basic ${base64.encode(
-          `${"admin@avalon-show.com"}:${"123456"}`
+          `${form.email}:${form.password}`
         )}`,
       }),
       body: JSON.stringify({
