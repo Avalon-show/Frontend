@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 // Importar modulo para conectar el componente con el store
 import { connect } from "react-redux";
@@ -12,6 +12,10 @@ import "./styles/LoginComponent.css";
 // import { useState } from "react";
 
 const LoginComponent = (props) => {
+  let history = useHistory();
+  // state = {};
+  // console.log(props);
+  // console.log(props.history);
   const [form, setValues] = useState({
     email: "",
   });
@@ -25,14 +29,16 @@ const LoginComponent = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // props.loginRequest(form);
+    props.loginRequest(form);
     //history esta dispobible gracias browser router
-    // props.history.push("/");
+    // props.history.push("/Home");
     console.log(form);
     const state = await loginUser(form);
     console.log(state.data.token);
     if (state.code === 200) {
       console.log("Inicio de sesión exitoso");
+      console.log(history);
+      history.push("/Main");
     } else {
       console.log("Error al Iniciar sesión");
     }

@@ -1,19 +1,27 @@
 import React from "react";
 import "./styles/HomeLanding.css";
+
+import { connect } from "react-redux";
+import { registerRequest } from "../actions";
+import { Link } from "react-router-dom";
+
 import NavbarLogin from "../components/NavbarLogin";
 import RegisterComponent from "../components/RegisterComponent";
 import Footer from "../components/Footer";
 
-class Register extends React.Component {
-  render() {
-    return (
-      <section className="bg-black hero">
-        <NavbarLogin />
-        <RegisterComponent />
-        <Footer />
-      </section>
-    );
-  }
-}
+const Register = (props) => {
+  return (
+    <section className="bg-black hero">
+      <NavbarLogin />
+      <RegisterComponent />
+      <Footer />
+    </section>
+  );
+};
 
-export default Register;
+const mapDispatchToProps = {
+  registerRequest,
+};
+
+// export default Register;
+export default connect(null, mapDispatchToProps)(Register);

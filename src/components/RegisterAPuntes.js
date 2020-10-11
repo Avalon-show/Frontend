@@ -32,7 +32,7 @@ const Register = (props) => {
     // 6. Disparamos la acción registrar el usuario en el store
     props.registerRequest(form);
     // Redireccionar a otra ruta.
-    props.history.push("/");
+    this.props.history.push("/Home");
   };
 
   return (

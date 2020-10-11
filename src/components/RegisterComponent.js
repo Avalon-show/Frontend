@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter, useHistory } from "react-router-dom";
+
 // import { withRouter } from 'react-router-dom';
 
 // Importar modulo para conectar el componente con el store
@@ -12,7 +13,8 @@ import createUser from "../utils/Register";
 import "./styles/LoginComponent.css";
 
 const RegisterComponent = (props) => {
-  const { match, location, history } = props;
+  let history = useHistory();
+  // const { match, location, history } = props;
   const [form, setValues] = useState({
     email: "",
     name: "",
@@ -44,7 +46,7 @@ const RegisterComponent = (props) => {
     if (state.code === 201) {
       console.log(props);
       console.log(history);
-      history.push("/Home");
+      history.push("/Home/Login");
       // this.props.history.push("/Home");
       // event.preventDefault();
       // // 6. Disparamos la acción registrar el usuario en el store
