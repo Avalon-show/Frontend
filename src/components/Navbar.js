@@ -8,7 +8,7 @@ const Navbar = (props) => {
   return (
     <section className="Navbar">
       <div className="container">
-        <Link to="/Home">
+        <Link to="/">
           <img className="image" src={logo} alt="Logo"></img>
         </Link>
         <Link to="/Home/Login" className="button">

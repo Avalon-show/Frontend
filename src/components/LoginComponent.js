@@ -47,7 +47,7 @@ const LoginComponent = (props) => {
   return (
     <div className="justify-center contenedor px-12">
       <form
-        className="flex flex-col items-center contenedor-caja"
+        className="flex flex-col items-center contenedor-caja mb-64"
         onSubmit={handleSubmit}
       >
         <h1 className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 text-white text-4xl m-10 text-center">
