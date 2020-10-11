@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+// import { withRouter } from 'react-router-dom';
 
 // Importar modulo para conectar el componente con el store
 import { connect } from "react-redux";
@@ -11,6 +12,7 @@ import createUser from "../utils/Register";
 import "./styles/LoginComponent.css";
 
 const RegisterComponent = (props) => {
+  const { match, location, history } = props;
   const [form, setValues] = useState({
     email: "",
     name: "",
@@ -40,7 +42,16 @@ const RegisterComponent = (props) => {
     const state = await createUser(form);
     console.log(state.code);
     if (state.code === 201) {
-      console.log("Cuenta creada exitosamente");
+      console.log(props);
+      console.log(history);
+      history.push("/Home");
+      // this.props.history.push("/Home");
+      // event.preventDefault();
+      // // 6. Disparamos la acción registrar el usuario en el store
+      // props.registerRequest(form);
+      // // Redireccionar a otra ruta.
+      // props.history.push("/Home");
+      // props.history.push("/Home");
     } else {
       console.log("Error al crear cuenta");
     }
@@ -111,6 +122,7 @@ const RegisterComponent = (props) => {
         >
           Registrarse
         </button>
+        <Link to="/login">Inicia sesión</Link>
         <div className="flex w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 justify-between">
           <h6 className=" text-white text-sm text-left mt-2 mb-8">
             Recuerdame
